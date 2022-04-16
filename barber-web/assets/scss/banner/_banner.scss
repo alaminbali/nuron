@@ -1,0 +1,104 @@
+
+#banner{
+    background: linear-gradient(rgba(0,0,0,.5),#009688), url(../images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    .logo{
+        width: 140px;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    .banner-text{
+        text-align: center;
+        color: white;
+        padding-top: 180px;
+        h1{
+            font-size: 130px;
+            font-family: 'Kaushan Script', cursive;
+        }
+        p{
+            font-size: 20px;
+            font-style: italic;
+        }
+    }
+}
+
+// side menu
+
+#sideNav{
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background: #009688;
+    z-index: 2;
+    transition: .5s;
+    nav{
+        ul{
+            li{
+                list-style: none;
+                margin: 50px 50px;
+                transition: .5s;
+                position: relative;
+                &:hover{
+                    transform: translate(5px, 2px) !important;
+                    a{
+                        &::after{
+                            width: 50%;
+                        }
+                    }
+                }
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        height: 3px;
+                        width: 0;
+                        background-color: #fff;
+                        bottom: 0;
+                        left: 0;
+                        transition: .5s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// menu buttom cross---
+
+#menuBtn{
+    width: 50px;
+    height: 50px;
+    background: #009688;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    border-radius: 3px;
+    z-index: 3;
+    cursor: pointer;
+    img{
+        width: 20px;
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 770px){
+    .banner-text {
+        h1{
+            font-size: 44px !important;
+        }
+        .banner-btn{
+            a{
+                display: block;
+                margin: 20px auto;
+            }
+        }
+    }
+}
